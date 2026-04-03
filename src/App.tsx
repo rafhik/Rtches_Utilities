@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import * as WorkspaceAPI from "trimble-connect-workspace-api"
+//import * as WorkspaceAPI from "trimble-connect-workspace-api"
 import SectionPlanesCreator from './components/SectionPlanesCreator'
 
 
@@ -11,7 +11,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   function increasecounter():void {
-    const test = count;
+    //const test = count;
     setCount((count) => count + 1);
   } 
   
