@@ -1,11 +1,11 @@
 //import React from 'react'
 
-import { type Box3, type SectionPlane, type Vector3, connect } from "trimble-connect-workspace-api";
+import { type Box3, type SectionPlane, type Vector3, type WorkspaceAPI } from "trimble-connect-workspace-api";
 //import * as WorkspaceAPI from "trimble-connect-workspace-api"
 
 
 
-export default function SectionPlanesCreator() {
+export default function SectionPlanesCreator({api} : {api: WorkspaceAPI}) {
 
 
     function addBBoxes(box1: Box3, box2: Box3) : Box3{
@@ -47,9 +47,9 @@ export default function SectionPlanesCreator() {
     }
 
     async function triggerGetSelection() {
-    const api = await connect(window.parent, (_event:any, _data: any) =>{
-
-    });
+    //const api = await connect(window.parent, (_event:any, _data: any) =>{
+    //
+    //});
     
     await api.viewer.removeSectionPlanes();
     const selection = await api.viewer.getSelection()
